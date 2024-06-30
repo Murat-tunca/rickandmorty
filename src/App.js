@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import CharacterList from './components/CharacterList';
 import Location from './components/Location';
 import Episode from './components/Episode';
+import Homepage from './components/Homepage';
 import './App.css';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
           <div className="upNavbar">ust taraf</div>
           <div className="mainPage">
             <Routes>
-              <Route path="/" element={<div>Home Page</div>} />
+              <Route path="/" element={<Homepage />} />
               <Route path="/episodes" element={<Episode />} />
               <Route path="/characters" element={<CharacterList />} />
               <Route path="/locations" element={<Location />} />

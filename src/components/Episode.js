@@ -19,7 +19,7 @@ const Episodes = () =>{
 
 return (
     <div>
-        <h1>Rick and Morty Locations</h1>
+        <h1>Rick and Morty Episodes</h1>
         <ul>{episodes.map(episodes => (
             <li key={episodes.id}>{episodes.name}</li>
         ))}</ul>
