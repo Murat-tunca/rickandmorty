@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Locations = () =>{
     const [locations, setLocations] = useState([]);
@@ -20,9 +21,15 @@ const Locations = () =>{
 return (
     <div>
         <h1>Rick and Morty Locations</h1>
-        <ul>{locations.map(locations => (
-            <li key={locations.id}>{locations.name}</li>
-        ))}</ul>
+        <ul>
+                {locations.map(location => (
+                    <li key={location.id}>
+                        <Link to={`/locations/${location.id}`}>
+                            <button>{location.name}</button>
+                        </Link>
+                    </li>
+                ))}
+            </ul>
     </div>
 )
 

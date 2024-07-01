@@ -4,6 +4,8 @@ import CharacterList from './components/CharacterList';
 import Location from './components/Location';
 import Episode from './components/Episode';
 import Homepage from './components/Homepage';
+import LocationsResidents from './components/LocationsResidents';
+import ResidentDetails from './components/ResidentDetails';
 import './App.css';
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
               <Route path="/episodes" element={<Episode />} />
               <Route path="/characters" element={<CharacterList />} />
               <Route path="/locations" element={<Location />} />
+              <Route path="/locations/:locationId" element={<LocationsResidents />} />
+              <Route path="/residents/:residentId" element={<ResidentDetails />} />
             </Routes>
           </div>
         </header>
