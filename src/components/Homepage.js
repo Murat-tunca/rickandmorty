@@ -28,12 +28,13 @@ const Homepage = () => {
     return (
         <div>
             <h1>Any Characters</h1>
-            <ul><h2>
+            <ul>
                 {homepages.map(character => (
                     <li key={character.id}>
+                        <img src={character.image} alt={character.name} />
                         {character.name} - {character.status} - {character.species} - {new Date(character.created).toLocaleDateString()}
                     </li>
-                ))}</h2>
+                ))}
             </ul>
         </div>
     );
